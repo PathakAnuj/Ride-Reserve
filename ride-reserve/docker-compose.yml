@@ -1,0 +1,10 @@
+services:
+  app:
+    container_name: ride-reserve-app
+    build: .
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    restart: unless-stopped
