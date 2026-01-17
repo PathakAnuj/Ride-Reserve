@@ -7,4 +7,4 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-    restart: unless-stopped
+    command: sh -c "npm install && npm start"
