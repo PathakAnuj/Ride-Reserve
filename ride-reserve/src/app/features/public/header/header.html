@@ -1,6 +1,16 @@
-<mat-toolbar color="accent" >
-  <span>Ride Reserve</span>
+<mat-toolbar class="toolbar">
+
+  <div>
+    <img src="assets/rideReserveLogoLight.png" alt="Ride Reserve logo" height="80" width="110">
+  </div>
+  
   <span class="spacer"></span>
-  <button  mat-button color="primary" >Login</button>
-  <button mat-button>Register</button>
+  
+  <div>
+    <a  mat-button routerLink="login">Login</a>
+  </div>
+  <div>
+    <a mat-button routerLink="register">Register</a>
+  </div>
+  
 </mat-toolbar>
