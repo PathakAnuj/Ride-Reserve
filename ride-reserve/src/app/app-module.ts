@@ -7,11 +7,12 @@ import { App } from './app';
 import { LandingModule } from './features/public/landing/landing-module';
 import { Header } from './features/public/header/header';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthModule } from './features/public/auth/auth-module';
 
 @NgModule({
   declarations: [
     App,
-    Header
+    Header,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LandingModule,
     BrowserAnimationsModule, 
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    AuthModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

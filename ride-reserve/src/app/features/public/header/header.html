@@ -1,16 +1,22 @@
 <mat-toolbar class="toolbar">
 
   <div>
-    <img src="assets/rideReserveLogoLight.png" alt="Ride Reserve logo" height="80" width="110">
+    <img src="assets/rideReserveLogoLight.png" alt="Ride Reserve logo" routerLink="/home" height="80" width="110">
   </div>
   
+   <div>
+    <a mat-button routerLink="/auth/register">Book Vihicle</a>
+  </div>
   <span class="spacer"></span>
   
   <div>
-    <a  mat-button routerLink="login">Login</a>
+    <a mat-button routerLink="/auth/register">Dark</a>
   </div>
   <div>
-    <a mat-button routerLink="register">Register</a>
+    <a  mat-button routerLink="/auth/login">Login</a>
+  </div>
+  <div>
+    <a mat-button routerLink="/auth/register">Register</a>
   </div>
   
 </mat-toolbar>
