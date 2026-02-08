@@ -3,6 +3,19 @@
 /* Angular Material Prebuilt Theme */
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
+/* Variables */
+@import './styles/abstracts/_variables.less';
+
+/* Themes */
+@import './styles/themes/_light.less';
+@import './styles/themes/_dark.less';
+
+/* Components */
+@import './styles/components/_header.less';
+@import './styles/components/_landing.less';
+
+
+
 /* Global Styles */
 html, body {
   margin: 0;
@@ -11,5 +24,7 @@ html, body {
 }
 
 body {
-  background-color: #fafafa;
+  background-color: var(--bg) !important;
+  color: var(--text-primary) !important;
+  transition: background-color 0.3s ease, color 0.3s ease !important;
 }

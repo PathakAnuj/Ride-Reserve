@@ -1,0 +1,115 @@
+@import '../abstracts/_variables';
+
+.landing {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--primary), @color-secondary);
+  color: var(--text-primary);
+  padding: @spacing-4xl @spacing-lg;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: @font-size-4xl;
+  font-weight: @font-weight-bold;
+  margin-bottom: @spacing-base;
+
+  span {
+    color: var(--accent);
+  }
+}
+
+.subtitle {
+  font-size: @font-size-xl;
+  margin-bottom: @spacing-xl;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background: var(--primary);
+  color: var(--card);
+  border: none;
+  padding: 0.9rem 2.2rem;
+  font-size: @font-size-base;
+  font-weight: @font-weight-semibold;
+  border-radius: @border-radius-full;
+  cursor: pointer;
+  transition: transform @transition-fast, box-shadow @transition-fast;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: @shadow-xl;
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 0.8rem 2rem;
+  font-weight: @font-weight-semibold;
+  border-radius: @border-radius-full;
+  cursor: pointer;
+  transition: background-color @transition-fast, color @transition-fast;
+
+  &:hover {
+    background: var(--primary);
+    color: var(--card);
+  }
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: @spacing-lg;
+  padding: @spacing-3xl @spacing-lg;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: var(--card);
+  padding: @spacing-lg;
+  border-radius: @border-radius-lg;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: background-color @transition-fast, color @transition-fast, box-shadow @transition-fast;
+
+  h3 {
+    margin-bottom: @spacing-sm;
+    color: var(--text-primary);
+  }
+
+  p {
+    color: var(--text-secondary);
+  }
+}
+
+/* CTA */
+.cta {
+  background: var(--bg);
+  padding: @spacing-3xl @spacing-lg;
+  text-align: center;
+  border-top: 1px solid var(--border);
+
+  h2 {
+    margin-bottom: @spacing-md;
+    color: var(--text-primary);
+  }
+}

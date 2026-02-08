@@ -1,7 +1,8 @@
-<mat-toolbar class="toolbar">
+<mat-toolbar class="toolbar" [ngClass]="isDarkTheme ? 'dark' : 'light'">
 
-  <div>
-    <img src="assets/rideReserveLogoLight.png" alt="Ride Reserve logo" routerLink="/home" height="80" width="110">
+  <div class="logo-section">
+    <span *ngIf="isDarkTheme" class="logo-text">Ride Reserve</span>
+    <img *ngIf="!isDarkTheme" src="assets/rideReserveLogoLight.png" alt="Ride Reserve logo" routerLink="/home" height="80" width="110">
   </div>
   
    <div>
@@ -10,7 +11,12 @@
   <span class="spacer"></span>
   
   <div>
-    <a mat-button routerLink="/auth/register">Dark</a>
+    <mat-slide-toggle (change)="toggleTheme($event)" color="accent"
+    [checked]="isDarkTheme"
+    >
+      <span class="toggle-text">{{ isDarkTheme ? 'Dark' : 'Light' }}</span>
+    </mat-slide-toggle>
+
   </div>
   <div>
     <a  mat-button routerLink="/auth/login">Login</a>
