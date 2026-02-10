@@ -3,61 +3,33 @@
 .toolbar {
   display: flex;
   align-items: center;
+  background-color: var(--card);
+  color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
 
   a {
+    color: var(--text-primary);
     transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--primary);
+    }
   }
 
   mat-slide-toggle {
     transition: all 0.3s ease;
   }
-}
-
-.toolbar.light {
-  background-color: @color-white;
-  color: @color-gray-900;
-
-  a {
-    color: @color-gray-900;
-  }
-
-  a:hover {
-    color: @color-primary;
-  }
 
   .toggle-text {
-    color: @color-gray-900;
+    color: var(--text-primary);
     transition: color 0.3s ease;
   }
 
   .logo-text {
     display: none;
-  }
-}
-
-.toolbar.dark {
-  background-color: @color-gray-800;
-  color: @color-gray-100;
-
-  a {
-    color: @color-gray-100;
-  }
-
-  a:hover {
-    color: @color-secondary-light;
-  }
-
-  .toggle-text {
-    color: @color-gray-100;
-    transition: color 0.3s ease;
-  }
-
-  .logo-text {
-    display: block;
     font-size: 1.5rem;
     font-weight: 700;
-    color: @color-gray-100;
+    color: var(--text-primary);
   }
 }
 

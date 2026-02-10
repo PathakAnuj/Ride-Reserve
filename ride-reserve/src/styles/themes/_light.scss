@@ -1,6 +1,7 @@
 @import '../abstracts/variables';
 
-:root {ß
+:root,
+.light-theme {
   --primary: #{$color-primary};
   --accent: #{$color-secondary};
   --bg: #{$color-gray-100};

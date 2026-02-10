@@ -14,10 +14,12 @@ export class Header implements OnInit {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       this.isDarkTheme = true;
-      document.body.classList.add('dark-theme');
+      document.documentElement.classList.add('dark-theme');
+      document.documentElement.classList.remove('light-theme');
     } else {
       this.isDarkTheme = false;
-      document.body.classList.remove('dark-theme');
+      document.documentElement.classList.remove('dark-theme');
+      document.documentElement.classList.add('light-theme');
     }
   }
 
@@ -26,10 +28,12 @@ export class Header implements OnInit {
     this.isDarkTheme = event.checked;
 
     if (this.isDarkTheme) {
-      document.body.classList.add('dark-theme');
+      document.documentElement.classList.add('dark-theme');
+      document.documentElement.classList.remove('light-theme');
       localStorage.setItem('theme', 'dark');
     } else {
-      document.body.classList.remove('dark-theme');
+      document.documentElement.classList.remove('dark-theme');
+      document.documentElement.classList.add('light-theme');
       localStorage.setItem('theme', 'light');
     }
   }
